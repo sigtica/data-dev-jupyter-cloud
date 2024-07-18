@@ -79,10 +79,3 @@ gsutil mv $LOCAL_FILE_PATH gs://$BUCKET_NAME/$DESTINATION_PATH
 where you must define the parameters: `LOCAL_FILE_PATH`, `BUCKET_NAME`, `DESTINATION_PATH`.
 
 
-## Built for cloud
-
-
-
-
-
-
