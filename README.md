@@ -40,6 +40,13 @@ bash run.sh
 ```
 and it will spin up a docker container using the image `data-dev-jupyter-cloud:v1` that you built earlier, available at http://localhost:8888, with a default password of `sigtica`. 
 
+## Mount volume
+
+By design, `run.sh` mounts a `shared/` folder to this docker image. Everything you read or write in that folder will be reflected on your local machine as well. 
+
+![shared volume](images/shared_folder.png)
+
+
 
 
 ## GCP Cloud SDK support
