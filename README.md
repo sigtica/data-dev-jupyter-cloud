@@ -41,3 +41,41 @@ bash run.sh
 and it will spin up a docker container using the image `data-dev-jupyter-cloud:v1` that you built earlier, available at http://localhost:8888, with a default password of `sigtica`. 
 
 
+
+## GCP Cloud SDK support
+
+This image has built-in support for using the GCP Cloud SDK to move files from and to Google Cloud Platform:
+
+![Cloud SDK](images/gcloud.png)
+
+You can initialize Google Cloud SDK as follows:
+```shell
+gcloud init
+```
+then
+```shell
+gcloud auth login
+```
+
+After you authenticate, you must set up your GCP project credentials.
+```shell
+gcloud config set project $PROJECT_ID
+```
+where `PROJECT_ID` is the project ID of your project on GCP.
+
+
+Then you can push or pull files from Google Cloud Storage, for example.
+```shell
+gsutil cp $LOCAL_FILE_PATH gs://$BUCKET_NAME/$DESTINATION_PATH
+gsutil mv $LOCAL_FILE_PATH gs://$BUCKET_NAME/$DESTINATION_PATH
+```
+where you must define the parameters: `LOCAL_FILE_PATH`, `BUCKET_NAME`, `DESTINATION_PATH`.
+
+
+## Built for cloud
+
+
+
+
+
+
